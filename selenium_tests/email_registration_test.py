@@ -23,26 +23,26 @@ e_mail_button.click()
 time.sleep(1)
 
 
-e_mail_registration = driver.find_element('xpath', EmailPageXpaths.EMAIL_REGISTRATION)
+e_mail_registration = driver.find_element('xpath', EmailPageXpaths.EMAIL_REGISTRATION_BUTTON)
 e_mail_registration.click()
 time.sleep(1)
 
-registration_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_LOGIN)
+registration_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_LOGIN_FIELD)
 registration_login.send_keys(users.OCCUPIED_USER.name)
 time.sleep(1)
 
-submit_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_SUBMIT_BUTTON)
+submit_login = driver.find_element('xpath', EmailPageXpaths.SUBMIT_BUTTON)
 submit_login.click()
 time.sleep(3)
 
 driver.get_screenshot_as_file('screens\\occupied_user.png')
 
-registration_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_LOGIN)
+registration_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_LOGIN_FIELD)
 registration_login.clear()
 registration_login.send_keys(users.ACCEPTABLE_USER.name)
 time.sleep(1)
 
-submit_login = driver.find_element('xpath', EmailPageXpaths.REGISTRATION_SUBMIT_BUTTON)
+submit_login = driver.find_element('xpath', EmailPageXpaths.SUBMIT_BUTTON)
 submit_login.click()
 time.sleep(3)
 
