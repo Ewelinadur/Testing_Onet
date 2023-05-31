@@ -3,12 +3,14 @@ import time
 from selenium.common import NoSuchElementException
 
 from drivers import browser_initializer
+from helpers.screenshot_helper import ScreenshotMaker
 from xpaths.xpaths import EmailPageXpaths, MainPageXpaths
 
 
 class EmailPage:
     def __init__(self):
         self.driver = browser_initializer.init_browser_on_main_page_and_return_driver()
+        self.screenshot_maker = ScreenshotMaker(self.driver)
 
     # def put_password_and_makes_screenshot(self, password):
     #     password_input_field = self.driver.find_element('xpath', EmailPageXpaths.REGISTRATION_PASSWORD_FIELD)
@@ -34,11 +36,7 @@ class EmailPage:
         time.sleep(1)
 
     def make_screenshot(self, screenshot_path):
-        print("Trying to save screenshot to " + screenshot_path)
-        if self.driver.get_screenshot_as_file(screenshot_path):
-            print("Screenshot saved successfully")
-        else:
-            print("Error during saving screenshot")
+        self.screenshot_maker.make_screenshot(screenshot_path)
 
     def email_occupied_message_is_present(self):
         try:

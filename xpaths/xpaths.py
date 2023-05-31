@@ -10,7 +10,6 @@ class WeatherPageXpaths:
 
 class EmailPageXpaths:
     EMAIL_REGISTRATION_BUTTON = "//a[contains(@href, 'register')]"
-
     REGISTRATION_LOGIN_FIELD = "//input[@name='alias']"
     SUBMIT_BUTTON = "//button[@type='submit']"
     EMAIL_OCCUPIED_MESSAGE = "//div[contains(text(), 'Niestety adres')]"
@@ -23,4 +22,5 @@ class EmailPageXpaths:
     PASSWORD_FIELD = "//input[@type='password']"
     WRONG_EMAIL_OR_PASSWORD_MESSAGE = "//div[contains(text(), 'Nieprawidłowy')]"
     REGISTRATION_SUBMIT_BUTTON_DISABLED = "//button[@disabled]"
+    ACTIVE_ICON_OF_SMALL_LETTERS = "//i[@data-testid='icon')]"
 

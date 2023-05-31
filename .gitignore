@@ -1,3 +1,5 @@
 /selenium_tests/screens/
 /.idea
 **/*,png
+/workdir/**
+!/workdir/requirements.txt

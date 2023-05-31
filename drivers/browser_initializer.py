@@ -1,5 +1,9 @@
+import os
 import time
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+
 from urls.urls import MAIN_WEBSITE_URL, EMAIL_WEBSITE_URL
 from xpaths.xpaths import MainPageXpaths
 
@@ -9,7 +13,11 @@ def init_browser_on_main_page_and_return_driver():
 
 
 def init_browser_on_url_and_return_driver(url):
-    driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--headless')
+    options.add_argument("--window-size=1920,1080")
+    driver = webdriver.Chrome(options=options)
     driver.maximize_window()
     driver.get(url)
     time.sleep(2)
