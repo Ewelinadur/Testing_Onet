@@ -27,13 +27,18 @@ python -m venv venv
 
 3. Install pip requirements
 ```commandline
-pip install -r requirements.txt
+pip install -r .\workdir\requirements.txt
 ```
 
 4. Run tests
 ```commandline
 python -m pytest
 ```
+or
+```commandline
+pytest --html=report.html
+```
+to generate html report.
 
 5. Screenshots
 
