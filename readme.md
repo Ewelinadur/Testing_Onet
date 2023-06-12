@@ -27,12 +27,16 @@ python -m venv venv
 
 3. Install pip requirements
 ```commandline
-pip install -r .\workdir\requirements.txt
+pip install -r requirements.txt
+```
+4. Back to project root
+```commandline
+cd ..
 ```
 
-4. Run tests
+5. Run tests
 ```commandline
-python -m pytest
+pytest
 ```
 or
 ```commandline
