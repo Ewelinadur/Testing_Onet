@@ -12,13 +12,6 @@ class EmailPage:
         self.driver = browser_initializer.init_browser_on_main_page_and_return_driver()
         self.screenshot_maker = ScreenshotMaker(self.driver)
 
-    # def put_password_and_makes_screenshot(self, password):
-    #     password_input_field = self.driver.find_element('xpath', EmailPageXpaths.REGISTRATION_PASSWORD_FIELD)
-    #     password_input_field.clear()
-    #     password_input_field.send_keys(password.password)
-    #     time.sleep(2)
-    #     self.driver.get_screenshot_as_file("screens\\" + password.name + ".png")
-
     def open_registration_form(self):
         email_button = self.driver.find_element('xpath', MainPageXpaths.EMAIL_WEBSITE_LINK)
         email_button.click()
@@ -68,9 +61,10 @@ class EmailPage:
         password_input.clear()
         return password_input
 
-    def login_to_email_accepted(self):
+    def login_to_email_not_accepted(self):
         if self.driver.find_element('xpath', EmailPageXpaths.WRONG_EMAIL_OR_PASSWORD_MESSAGE):
             return True
         else:
             return False
+
 

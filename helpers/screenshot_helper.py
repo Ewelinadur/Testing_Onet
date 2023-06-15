@@ -13,6 +13,7 @@ class ScreenshotMaker:
         else:
             print("Error during saving screenshot")
 
+
     def _create_screenshot_folder_if_does_not_exist(self):
         screenshot_folder = "screenshots"
         if not os.path.exists(screenshot_folder):

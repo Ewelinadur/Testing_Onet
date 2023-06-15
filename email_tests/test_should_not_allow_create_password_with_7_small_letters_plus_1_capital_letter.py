@@ -18,7 +18,7 @@ def test_should_not_allow_create_password_with_7_small_letters_plus_1_capital_le
     registration_repassword_field.send_keys(password.PASSWORD_7_SMALL_LETTERS_PLUS_1_CAPITAL_LETTER.password)
     time.sleep(1)
 
-    password_page.make_screenshot('password_7_letters.png')
+    password_page.make_screenshot('password_7_letters_plus_1_cl.png')
 
     assert password_page.submit_button_is_disabled()
 

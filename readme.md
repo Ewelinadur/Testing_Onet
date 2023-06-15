@@ -1,6 +1,6 @@
 The aim of the ProjectSeleniumED is to test the possibility of sign up and log in to email in op.pl domain at the www.onet.pl website.
-Project includes 7 tests.\
-Tests include input occupied and accepted login and different combination of password.
+Project includes 8 tests.\
+Tests include input occupied and accepted login, different combination of password and onactive email address.
 
 **Software requirements**
 
@@ -29,18 +29,14 @@ python -m venv venv
 ```commandline
 pip install -r requirements.txt
 ```
-4. Back to project root
-```commandline
-cd ..
-```
 
-5. Run tests
+4. Run tests
 ```commandline
-pytest
+pytest ..
 ```
 or
 ```commandline
-pytest --html=report.html
+pytest --html=report.html ..
 ```
 to generate html report.
 

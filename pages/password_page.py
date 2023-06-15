@@ -6,7 +6,6 @@ from drivers import browser_initializer
 from helpers.screenshot_helper import ScreenshotMaker
 from xpaths.xpaths import EmailPageXpaths
 
-
 class PasswordPage:
     def __init__(self):
         self.driver = browser_initializer.init_email_browser_and_return_driver()
@@ -37,12 +36,7 @@ class PasswordPage:
     def make_screenshot(self, screenshot_path):
         self.screenshot_maker.make_screenshot(screenshot_path)
 
-    def weak_password_message_is_present(self):
-        try:
-            self.driver.find_element('xpath', EmailPageXpaths.PASSWORD_NOT_ACCEPTED_MESSAGE)
-            return True
-        except NoSuchElementException:
-            return False
+
 
     def submit_button_is_disabled(self):
         try:
@@ -58,16 +52,4 @@ class PasswordPage:
         except NoSuchElementException:
             return False
 
-    # def verify_correct_color_of_submit_button
-    #     try:
-    #         self.driver.find_element(By.type('submit'))
-    #
-    #
-    #        WebElement t = driver.findElement(By.tagName("h1"));
-    #   //obtain color in rgba
-    #   String s = t.getCssValue("color");
-    #   // convert rgba to hex
-    #   String c = Color.fromString(s).asHex();
-    #   System.out.println("Color is :" + s);
-    #   System.out.println("Hex code for color:" + c);
-    #   driver.quit();
+
